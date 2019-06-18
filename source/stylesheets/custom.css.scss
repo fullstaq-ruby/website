@@ -1,0 +1,22 @@
+.navbar-brand {
+  // Fix vertical alignment on mobile.
+  padding-top: 1rem;
+
+  > .logo {
+    display: inline-block;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+
+  > .vendor {
+    font-weight: normal;
+  }
+
+  > .product {
+    font-weight: bold;
+  }
+}
+
+#fh5co-header #navbar li a {
+  color: white;
+}
