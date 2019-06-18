@@ -17,12 +17,22 @@
           <div class="navbar-header">
             <!-- Mobile Toggle Menu Button -->
             <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-            <a class="navbar-brand" href="index.html"><%= image_tag 'fullstaq-logo-small.png', srcset: 'fullstaq-logo-small.png 1x, fullstaq-logo-small@2x.png 2x', class: 'logo', alt: '', 'aria-hidden': true %><span class="vendor">Fullstaq</span> <span class="product">Ruby</span></a>
+            <a class="navbar-brand" href="index.html"><%= image_tag 'fullstaq-logo-small.png', srcset: 'fullstaq-logo-small.png 1x, fullstaq-logo-small@2x.png 2x', class: 'logo', alt: '', 'aria-hidden': true %><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <%= navbar_link 'Get Started', :get_started, @current_section, '#' %>
-              <%= navbar_link 'Editions', :editions, @current_section, '#' %>
+              <% navbar_dropdown 'Get Started', :get_started, @current_section do %>
+                <li><a href="#">For Servers</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">For Containers <span class="badge">coming soon!</span></a></li>
+                <li class="disabled"><a href="#">For Heroku <span class="badge">coming soon!</span></a></li>
+              <% end %>
+              <% navbar_dropdown 'Editions', :editions, @current_section do %>
+                <li><a href="#">Server Edition</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Container Edition <span class="badge">coming soon!</span></a></li>
+                <li class="disabled"><a href="#">Heroku Edition <span class="badge">coming soon!</span></a></li>
+              <% end %>
               <%= navbar_link 'Community', :community, @current_section, '#' %>
               <%= navbar_link 'Blog', :blog, @current_section, '#' %>
               <%= navbar_link 'About', :about, @current_section, '#' %>

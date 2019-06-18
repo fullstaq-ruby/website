@@ -1,3 +1,9 @@
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background: transparent;
+}
+
 .navbar-brand {
   // Fix vertical alignment on mobile.
   padding-top: 1rem;
@@ -15,8 +21,9 @@
   > .product {
     font-weight: bold;
   }
-}
 
-#fh5co-header #navbar li a {
-  color: white;
+  > .beta-disclaimer {
+    font-weight: 300;
+    font-size: 60%;
+  }
 }
