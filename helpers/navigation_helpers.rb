@@ -1,7 +1,7 @@
 module NavigationHelpers
-  def navbar_link(label, section_id, current_section_id, target)
+  def navbar_link(label, section_id, current_section_id, target, options = {})
     link = link_to(%Q{<span>#{h label}</span>}, url_for(target),
-      'data-nav-section': [section_id].flatten.last)
+      { 'data-nav-section': [section_id].flatten.last }.merge(options))
     if current_section_id_matches?(current_section_id, section_id)
       %Q{<li class="active">#{link}</li>}
     else

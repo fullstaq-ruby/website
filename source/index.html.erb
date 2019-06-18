@@ -4,14 +4,20 @@
     <div class="text-wrap">
       <div class="text-inner">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-10 col-md-offset-1">
             <!-- TODO: https://www.vexels.com/png-svg/preview/151224/slot-diamond-icon -->
-            <%= image_tag 'ruby-blue.png', height: 256 %>
+            <%= image_tag 'ruby-blue.png', height: 256, class: 'hero-splash', alt: 'Fullstaq Ruby logo' %>
+
             <h1>Ruby, optimized for production</h1>
-            <h2>A new Ruby distribution, with the Ruby<br>you know and love, but better.</h2>
+            <h2>
+              A new Ruby distribution, with
+              <span class="mid-sentence-break"><br></span>
+              the Ruby you know and love, but better.
+            </h2>
+
             <div class="highlights-container">
               <ul class="highlights">
-                <li>Less memory — save 30-50%!</li>
+                <li>Less memory — save <strong>30-50%</strong></li>
                 <li>Faster</li>
                 <li>More secure</li>
                 <li>Fully open source, based on MRI</li>
@@ -29,9 +35,7 @@
   <div class="container">
     <div class="row row-bottom-padded-lg">
 
-      <div class="fh5co-block" style="background-image: url(images/img_7.jpg);">
-        <div class="overlay-darker"></div>
-        <div class="overlay"></div>
+      <div class="fh5co-block">
         <div class="fh5co-text">
           <!-- TODO: https://www.iconfinder.com/icons/981628/backup_cloud_server_icon -->
           <div class="fh5co-intro-icon"><%= image_tag 'server.png', height: 96, alt: '', 'aria-hidden': true %></div>
@@ -43,9 +47,7 @@
         </div>
       </div>
 
-      <div class="fh5co-block" style="background-image: url(images/img_8.jpg);">
-        <div class="overlay-darker"></div>
-        <div class="overlay"></div>
+      <div class="fh5co-block">
         <div class="fh5co-text">
           <!-- TODO: https://www.iconfinder.com/icons/378280/container_ship_icon -->
           <div class="fh5co-intro-icon"><%= image_tag 'container.png', height: 96, alt: '', 'aria-hidden': true %></div>
@@ -57,7 +59,7 @@
         </div>
       </div>
 
-      <div class="fh5co-block" style="background-image: url(images/img_10.jpg);">
+      <div class="fh5co-block">
         <div class="overlay-darker"></div>
         <div class="overlay"></div>
         <div class="fh5co-text">
@@ -69,6 +71,75 @@
           <p><a href="#">Subscribe to our blog for updates</a></p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<a name="about"></a>
+<section id="fh5co-testimonials">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-heading text-center" style="margin-bottom: 0">
+        <h2>What is Fullstaq Ruby?</h2>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 subtext">
+            <p>Fullstaq Ruby is an MRI-based Ruby distribution that's optimized for server production use cases. It is compiled with the <a href="https://medium.com/rubyinside/how-we-halved-our-memory-consumption-in-rails-with-jemalloc-86afa4e54aa3">Jemalloc</a> and <a href="https://www.joyfulbikeshedding.com/blog/2019-03-14-what-causes-ruby-memory-bloat.html">malloc_trim</a> patches, allowing lower memory usage and higher performance.</p>
+            <p>We supplies binaries (DEBs, RPMs) so that you don't have to compile Ruby from source, and so that you can easily keep Ruby security-patched.</p>
+
+            <p>
+              <b>Learn more:</b><br>
+              <a href="#">Why did we make Fullstaq Ruby?</a><br>
+              <a href="#">How does it work?</a><br>
+              <a href="#">Frequently Asked Questions</a>
+            </p>
+            <p>-or-</p>
+            <p><a href="" class="btn btn-primary">Get Started</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fh5co-services" data-section="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-heading text-center">
+        <h2>Meet the founders</h2>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-offset-1 col-md-5">
+        <div class="fh5co-person text-center">
+          <figure><a href="https://www.joyfulbikeshedding.com"><%= image_tag 'hongli.png', height: 160, alt: "Hongli Lai's avatar" %></a></figure>
+          <h3><a href="https://www.joyfulbikeshedding.com">Hongli Lai</a></h3>
+          <span class="fh5co-position">Developer, CTO, entrepreneur</span>
+
+          <p><a href="https://www.joyfulbikeshedding.com">Hongli</a> is the creator of the <a href="https://www.phusionpassenger.com">Passenger application server</a>, CTO at Phusion, and creator of the classic Ruby Enterprise Edition.</p>
+          <p class="longtext">Hongli writes software with the belief that software development and work should be fun, and that computers should serve humans instead of the other way around.</p>
+
+          <ul class="social social-circle">
+            <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="fh5co-person text-center">
+          <figure><a href="https://fullstaq.com/"><%= image_tag 'fullstaq-logo.png', height: 160, alt: 'Fullstaq Logo' %></a></figure>
+          <h3><a href="https://fullstaq.com/">Fullstaq</a></h3>
+          <span class="fh5co-position">Professio Nimbus Indigena</span>
+
+          <p><a href="https://fullstaq.com/">Fullstaq</a> is a cloud native, Kubernetes and DevOps technology partner company in the Netherlands.</p>
+          <p class="longtext">Full of people with a deep passion for cloud native infrastructure, Fullstaq helps you take your technology stack to the next level by providing consultancy, training, and much more.</p>
+
+          <p><a href="https://fullstaq.com" class="btn btn-primary">Come and say hi</a></p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

@@ -29,15 +29,36 @@
 }
 
 #fh5co-home {
+  .hero-splash {
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .mid-sentence-break {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .mid-sentence-break {
+      display: none;
+    }
+  }
+
   .highlights-container {
     display: flex;
     justify-content: center;
     text-align: left;
     font-size: 25px;
 
+    @media screen and (max-width: 400px) {
+      font-size: 20px;
+    }
+
     .highlights {
       list-style: none;
       padding: 0;
+      margin: 3rem 0;
 
       li:before {
         content: '✓';
@@ -45,6 +66,10 @@
       }
     }
   }
+}
+
+p.longtext {
+  font-size: 18px;
 }
 
 .coming-soon {
