@@ -1,10 +1,3 @@
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 /* =======================================================
 *
 *   Template Style
@@ -473,7 +466,8 @@ h1, h2, h3, h4, h5, h6 {
   -moz-flex-wrap: wrap;
 }
 #fh5co-intro .fh5co-block {
-  width: 33.33%;
+  width: 30%;
+  margin-right: 5%;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -492,9 +486,13 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   backgroun-repeat: no-repeat;
 }
+#fh5co-intro .fh5co-block:last-child {
+  margin-right: 0;
+}
 @media screen and (max-width: 768px) {
   #fh5co-intro .fh5co-block {
     width: 100%;
+    margin-right: 0;
   }
 }
 #fh5co-intro .fh5co-block > .overlay-darker {
@@ -533,27 +531,6 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-intro .fh5co-block h2 {
   font-size: 24px;
   font-weight: 400;
-}
-#fh5co-intro .fh5co-block:hover > .overlay, #fh5co-intro .fh5co-block:focus > .overlay {
-  opacity: 0;
-  z-index: 9;
-}
-#fh5co-intro .fh5co-block:hover > .fh5co-text, #fh5co-intro .fh5co-block:focus > .fh5co-text {
-  color: #fff;
-}
-#fh5co-intro .fh5co-block:hover > .fh5co-text .fh5co-intro-icon, #fh5co-intro .fh5co-block:focus > .fh5co-text .fh5co-intro-icon {
-  color: #fff;
-}
-#fh5co-intro .fh5co-block:hover h2, #fh5co-intro .fh5co-block:focus h2 {
-  color: #fff;
-}
-#fh5co-intro .fh5co-block:hover .btn, #fh5co-intro .fh5co-block:focus .btn {
-  border: 2px solid #fff !important;
-  background: transparent;
-}
-#fh5co-intro .fh5co-block:hover .btn:hover, #fh5co-intro .fh5co-block:focus .btn:hover {
-  background: #46aecf !important;
-  border: 2px solid #46aecf !important;
 }
 
 .watch-video {
@@ -1258,7 +1235,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #46aecf;
 }
 .btn:hover, .btn:active, .btn:focus {
-  background: #393e46 !important;
+  background: #56c4ea !important;
   color: #fff;
   outline: none !important;
 }

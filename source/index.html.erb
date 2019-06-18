@@ -5,8 +5,18 @@
       <div class="text-inner">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <h1 class="to-animate fadeInUp animated">Do something you love.</h1>
-            <h2 class="to-animate fadeInUp animated">Another free HTML5 bootstrap template by <a href="http://freehtml5.co/" target="_blank" title="Free HTML5 Bootstrap Templates">FREEHTML5.co</a> released under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons 3.0</a><br> ported for Hugo by <a href="http://saey55.gitlab.io/pietercv" target="_blank">Pieter Saey</a></h2>
+            <!-- TODO: https://www.vexels.com/png-svg/preview/151224/slot-diamond-icon -->
+            <%= image_tag 'ruby-blue.png', height: 256 %>
+            <h1>Ruby, optimized for production</h1>
+            <h2>A new Ruby distribution, with the Ruby<br>you know and love, but better.</h2>
+            <div class="highlights-container">
+              <ul class="highlights">
+                <li>Less memory — save 30-50%!</li>
+                <li>Faster</li>
+                <li>More secure</li>
+                <li>Fully open source, based on MRI</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -15,48 +25,50 @@
   <div class="slant"></div>
 </section>
 
-<section id="fh5co-intro" class="animated">
+<section id="fh5co-intro">
   <div class="container">
     <div class="row row-bottom-padded-lg">
-      
-      <div class="fh5co-block to-animate fadeInRight animated" style="background-image: url(images/img_7.jpg);">
+
+      <div class="fh5co-block" style="background-image: url(images/img_7.jpg);">
         <div class="overlay-darker"></div>
         <div class="overlay"></div>
         <div class="fh5co-text">
-          <i class="fh5co-intro-icon icon-bulb"></i>
-          <h2>Plan</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          
-          <p><a href="#" class="btn btn-primary">Get In Touch</a></p>
-          
+          <!-- TODO: https://www.iconfinder.com/icons/981628/backup_cloud_server_icon -->
+          <div class="fh5co-intro-icon"><%= image_tag 'server.png', height: 96, alt: '', 'aria-hidden': true %></div>
+          <h2>Server Edition</h2>
+          <p>Perfect for traditional infrastructure. Install with DEBs and RPMs.</p>
+
+          <p><a href="#" class="btn btn-primary">Get started</a></p>
+          <p><a href="#" class="btn btn-secondary">Learn more</a></p>
         </div>
       </div>
-      
-      <div class="fh5co-block to-animate fadeInRight animated" style="background-image: url(images/img_8.jpg);">
+
+      <div class="fh5co-block" style="background-image: url(images/img_8.jpg);">
         <div class="overlay-darker"></div>
         <div class="overlay"></div>
         <div class="fh5co-text">
-          <i class="fh5co-intro-icon icon-wrench"></i>
-          <h2>Develop</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          
-          <p><a href="#" class="btn btn-primary">Click Me</a></p>
-          
+          <!-- TODO: https://www.iconfinder.com/icons/378280/container_ship_icon -->
+          <div class="fh5co-intro-icon"><%= image_tag 'container.png', height: 96, alt: '', 'aria-hidden': true %></div>
+          <h2>Container Edition</h2>
+          <p>For Docker and Kubernetes. Optimized for the cloud native era.</p>
+
+          <p class="coming-soon">Coming soon!</p>
+          <p><a href="#">Subscribe to our blog for updates</a></p>
         </div>
       </div>
-      
-      <div class="fh5co-block to-animate fadeInRight animated" style="background-image: url(images/img_10.jpg);">
+
+      <div class="fh5co-block" style="background-image: url(images/img_10.jpg);">
         <div class="overlay-darker"></div>
         <div class="overlay"></div>
         <div class="fh5co-text">
-          <i class="fh5co-intro-icon icon-rocket"></i>
-          <h2>Launch</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          
-          <p><a href="#" class="btn btn-primary">Why us?</a></p>
-          
+          <div class="fh5co-intro-icon"><%= image_tag 'heroku.png', height: 96, alt: '', 'aria-hidden': true %></div>
+          <h2>Heroku Edition</h2>
+          <p>Get more out of your dynos. Integrates via Heroku Buildpacks.</p>
+
+          <p class="coming-soon">Coming soon!</p>
+          <p><a href="#">Subscribe to our blog for updates</a></p>
         </div>
       </div>
-    </div>    
+    </div>
   </div>
 </section>

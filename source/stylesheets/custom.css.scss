@@ -27,3 +27,27 @@
     font-size: 60%;
   }
 }
+
+#fh5co-home {
+  .highlights-container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    font-size: 25px;
+
+    .highlights {
+      list-style: none;
+      padding: 0;
+
+      li:before {
+        content: '✓';
+        padding-right: 2rem;
+      }
+    }
+  }
+}
+
+.coming-soon {
+  font-style: italic;
+  font-size: 150%;
+}

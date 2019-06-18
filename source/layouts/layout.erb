@@ -22,13 +22,13 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <% navbar_dropdown 'Get Started', :get_started, @current_section do %>
-                <li><a href="#">For Servers</a></li>
+                <%= navbar_link 'For Servers', [:get_started, :get_started_for_servers], @current_section, '#' %>
                 <li role="separator" class="divider"></li>
                 <li class="disabled"><a href="#">For Containers <span class="badge">coming soon!</span></a></li>
                 <li class="disabled"><a href="#">For Heroku <span class="badge">coming soon!</span></a></li>
               <% end %>
               <% navbar_dropdown 'Editions', :editions, @current_section do %>
-                <li><a href="#">Server Edition</a></li>
+                <%= navbar_link 'Server Edition', [:editions, :server_edition], @current_section, '#' %>
                 <li role="separator" class="divider"></li>
                 <li class="disabled"><a href="#">Container Edition <span class="badge">coming soon!</span></a></li>
                 <li class="disabled"><a href="#">Heroku Edition <span class="badge">coming soon!</span></a></li>

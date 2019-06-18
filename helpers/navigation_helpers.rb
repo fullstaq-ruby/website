@@ -1,14 +1,15 @@
 module NavigationHelpers
-  def navbar_link(label, id, current_id, target)
-    link = link_to(%Q{<span>#{h label}</span>}, url_for(target), 'data-nav-section': id)
-    if id == current_id
+  def navbar_link(label, section_id, current_section_id, target)
+    link = link_to(%Q{<span>#{h label}</span>}, url_for(target),
+      'data-nav-section': [section_id].flatten.last)
+    if current_section_id_matches?(current_section_id, section_id)
       %Q{<li class="active">#{link}</li>}
     else
       %Q{<li>#{link}</li>}
     end
   end
 
-  def navbar_dropdown(label, id, current_id)
+  def navbar_dropdown(label, section_id, current_section_id)
     link = link_to(%Q{<span>#{h label} <span class="caret"></span></span>},
       '#',
       class: 'dropdown-toggle',
@@ -17,7 +18,7 @@ module NavigationHelpers
       'aria-haspopup': true,
       'aria-expanded': false)
     active_class =
-      if id == current_id
+      if current_section_id_matches?(current_section_id, section_id)
         'active'
       else
         nil
@@ -25,5 +26,14 @@ module NavigationHelpers
     concat %Q{<li class="dropdown #{active_class}">#{link}<ul class="dropdown-menu">}
     yield
     concat %Q{</ul></li>}
+  end
+
+private
+  def current_section_id_matches?(current_section_id, section_id)
+    if section_id.is_a?(Array)
+      section_id.include?(current_section_id)
+    else
+      section_id == current_section_id
+    end
   end
 end
