@@ -28,11 +28,23 @@ p {
   margin-bottom: 1.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #000;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
   margin: 0 0 30px 0;
+}
+
+h1.strong,
+h2.strong,
+h3.strong,
+h4.strong,
+h5.strong,
+h6.strong {
+  color: black;
 }
 
 ::-webkit-selection {

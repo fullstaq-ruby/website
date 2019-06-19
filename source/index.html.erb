@@ -46,8 +46,8 @@
           <p class="edition-label"><span class="label label-info">Now in beta</span></p>
           <p>Perfect for traditional infrastructure. Install with DEBs and RPMs.</p>
 
-          <p><a href="#" class="btn btn-primary">Get started</a>
-            <a href="#" class="intro-text-after-call-to-action">or learn more</a></p>
+          <p><%= link_to 'Get Started', 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition#installation', class: 'btn btn-primary' %>
+            <a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition#readme" class="intro-text-after-call-to-action">or learn more</a></p>
         </div>
       </div>
 
@@ -59,7 +59,7 @@
           <p class="edition-label"><span class="label label-default">Coming soon!</span></p>
           <p>For Docker and Kubernetes. Optimized for the cloud native era.</p>
 
-          <p><a href="#follow" class="btn btn-default">Follow us</a>
+          <p><a href="https://twitter.com/honglilai" class="btn btn-default">Follow on Twitter</a>
             <span class="intro-text-after-call-to-action">to stay informed</span></p>
         </div>
       </div>
@@ -73,7 +73,7 @@
           <p class="edition-label"><span class="label label-default">Coming soon!</span></p>
           <p>Get more out of your dynos. Integrates via Heroku Buildpacks.</p>
 
-          <p><a href="#follow" class="btn btn-default">Follow us</a>
+          <p><a href="https://twitter.com/honglilai" class="btn btn-default">Follow on Twitter</a>
             <span class="intro-text-after-call-to-action">to stay informed</span></p>
         </div>
       </div>
@@ -87,21 +87,46 @@
     <div class="row">
       <div class="col-md-12 section-heading text-center" style="margin-bottom: 0">
         <h2>What is Fullstaq Ruby?</h2>
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 subtext">
-            <p>Fullstaq Ruby is an MRI-based Ruby distribution that's optimized for server production use cases. It is compiled with the <a href="https://medium.com/rubyinside/how-we-halved-our-memory-consumption-in-rails-with-jemalloc-86afa4e54aa3">Jemalloc</a> and <a href="https://www.joyfulbikeshedding.com/blog/2019-03-14-what-causes-ruby-memory-bloat.html">malloc_trim</a> patches, allowing lower memory usage and higher performance.</p>
-            <p>We supplies binaries (DEBs, RPMs) so that you don't have to compile Ruby from source, and so that you can easily keep Ruby security-patched.</p>
+      </div>
+    </div>
 
-            <p>
-              <b>Learn more:</b><br>
-              <a href="#">Why did we make Fullstaq Ruby?</a><br>
-              <a href="#">How does it work?</a><br>
-              <a href="#">Frequently Asked Questions</a>
-            </p>
-            <p>-or-</p>
-            <p><a href="" class="btn btn-primary">Get Started</a></p>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <p>Fullstaq Ruby is an MRI-based Ruby distribution that's optimized for server production use cases. It is compiled with the <a href="https://medium.com/rubyinside/how-we-halved-our-memory-consumption-in-rails-with-jemalloc-86afa4e54aa3">Jemalloc</a> and <a href="https://www.joyfulbikeshedding.com/blog/2019-03-14-what-causes-ruby-memory-bloat.html">malloc_trim</a> patches, allowing lower memory usage and higher performance.</p>
+        <p>We supplies binaries (DEBs, RPMs) so that you don't have to compile Ruby from source, and so that you can easily keep Ruby security-patched.</p>
+      </div>
+      <div class="col-md-4 col-md-offset-1">
+        <h3>Learn more</h3>
+        <ul>
+          <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition#why-was-fullstaq-ruby-created">Why did we make Fullstaq Ruby?</a></li>
+          <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition#how-it-works">How does it work?</a></li>
+          <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition#comparisons-to-other-systems">Comparisons to other systems</a></li>
+          <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition#faq">Frequently Asked Questions</a></li>
+        </ul>
+        <p style="margin: 1rem 0">-or-</p>
+        <p><%= link_to 'Get Started', 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition#installation', class: 'btn btn-primary' %></p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 3rem">
+      <div class="col-md-5 col-md-offset-1">
+        <h3>For the community, by the community</h3>
+        <p>
+          We intend for Fullstaq Ruby to be a true <em>community project</em>, welcoming contributors all over the world, and maintainable by anyone. To make this work, we are working on a lot more developer and contributor documentation.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <h3>More improvements on the way</h3>
+        <p>
+          Fullstaq Ruby is in beta: it is a <strong>work-in-progress</strong>. For example, we have DEBs/RPMs, but <em>no APT/YUM repository yet</em>. Further memory reduction optimizations are possible. And much more.
+        </p>
+      </div>
+      <div class="col-md-12 text-center">
+        <p class="lead">So stay tuned, folks!</p>
+        <p>
+          <%= link_to 'View our roadmap', '/roadmap.html' %><br>
+          <a href="https://twitter.com/honglilai">Follow Twitter for news</a>
+        </p>
       </div>
     </div>
   </div>
@@ -126,15 +151,16 @@
           <p class="longtext">Hongli writes software with the belief that software development and work should be fun, and that computers should serve humans instead of the other way around.</p>
 
           <ul class="social social-circle">
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+            <li><a href="https://twitter.com/honglilai"><i class="icon-twitter" title="Twitter"></i></a></li>
+            <li><a href="https://joyfulbikeshedding.com"><i class="icon-globe2" title="Website"></i></a></li>
+            <li><a href="https://github.com/honglilai"><i class="icon-github" title="Github"></i></a></li>
+            <li><a href="mailto:honglilai@gmail.com"><i class="icon-mail2" title="Email"></i></a></li>
           </ul>
         </div>
       </div>
 
       <div class="col-md-5">
-        <div class="fh5co-person text-center">
+        <div class="fh5co-person last text-center">
           <figure><a href="https://fullstaq.com/"><%= image_tag 'fullstaq-logo.png', height: 160, alt: 'Fullstaq Logo' %></a></figure>
           <h3><a href="https://fullstaq.com/">Fullstaq</a></h3>
           <span class="fh5co-position">Professio Nimbus Indigena</span>
