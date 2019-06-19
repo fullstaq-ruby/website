@@ -40,6 +40,10 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
+activate :relative_assets
+
+set :relative_links, true
+
 configure :development do
   set :google_analytics, false
 end
