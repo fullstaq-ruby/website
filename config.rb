@@ -41,6 +41,7 @@ page '/*.txt', layout: false
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 activate :relative_assets
+activate :asset_hash
 
 set :relative_links, true
 
