@@ -5,8 +5,11 @@
       <div class="text-inner">
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <!-- TODO: https://www.vexels.com/png-svg/preview/151224/slot-diamond-icon -->
-            <%= image_tag 'ruby-blue.png', height: 256, class: 'hero-splash', alt: 'Fullstaq Ruby logo' %>
+            <%= image_tag 'ruby-blue.png',
+              height: 256,
+              class: 'hero-splash',
+              srcset: 'ruby-blue.png 1x, ruby-blue@2x.png 2x',
+              alt: 'Fullstaq Ruby logo' %>
 
             <h1>Ruby, optimized for production</h1>
             <h2>
@@ -40,10 +43,11 @@
           <!-- TODO: https://www.iconfinder.com/icons/981628/backup_cloud_server_icon -->
           <div class="fh5co-intro-icon"><%= image_tag 'server.png', height: 96, alt: '', 'aria-hidden': true %></div>
           <h2>Server Edition</h2>
+          <p class="edition-label"><span class="label label-info">Now in beta</span></p>
           <p>Perfect for traditional infrastructure. Install with DEBs and RPMs.</p>
 
-          <p><a href="#" class="btn btn-primary">Get started</a></p>
-          <p><a href="#" class="btn btn-secondary">Learn more</a></p>
+          <p><a href="#" class="btn btn-primary">Get started</a>
+            <a href="#" class="intro-text-after-call-to-action">or learn more</a></p>
         </div>
       </div>
 
@@ -52,10 +56,11 @@
           <!-- TODO: https://www.iconfinder.com/icons/378280/container_ship_icon -->
           <div class="fh5co-intro-icon"><%= image_tag 'container.png', height: 96, alt: '', 'aria-hidden': true %></div>
           <h2>Container Edition</h2>
+          <p class="edition-label"><span class="label label-default">Coming soon!</span></p>
           <p>For Docker and Kubernetes. Optimized for the cloud native era.</p>
 
-          <p class="coming-soon">Coming soon!</p>
-          <p><a href="#">Subscribe to our blog for updates</a></p>
+          <p><a href="#follow" class="btn btn-default">Follow us</a>
+            <span class="intro-text-after-call-to-action">to stay informed</span></p>
         </div>
       </div>
 
@@ -65,10 +70,11 @@
         <div class="fh5co-text">
           <div class="fh5co-intro-icon"><%= image_tag 'heroku.png', height: 96, alt: '', 'aria-hidden': true %></div>
           <h2>Heroku Edition</h2>
+          <p class="edition-label"><span class="label label-default">Coming soon!</span></p>
           <p>Get more out of your dynos. Integrates via Heroku Buildpacks.</p>
 
-          <p class="coming-soon">Coming soon!</p>
-          <p><a href="#">Subscribe to our blog for updates</a></p>
+          <p><a href="#follow" class="btn btn-default">Follow us</a>
+            <span class="intro-text-after-call-to-action">to stay informed</span></p>
         </div>
       </div>
     </div>
@@ -134,7 +140,7 @@
           <span class="fh5co-position">Professio Nimbus Indigena</span>
 
           <p><a href="https://fullstaq.com/">Fullstaq</a> is a cloud native, Kubernetes and DevOps technology partner company in the Netherlands.</p>
-          <p class="longtext">Full of people with a deep passion for cloud native infrastructure, Fullstaq helps you take your technology stack to the next level by providing consultancy, training, and much more.</p>
+          <p class="longtext">Full of people with a deep passion for cloud native infrastructure, Fullstaq helps you take your technology stack to the next level through consultancy, training, and much more.</p>
 
           <p><a href="https://fullstaq.com" class="btn btn-primary">Come and say hi</a></p>
         </div>

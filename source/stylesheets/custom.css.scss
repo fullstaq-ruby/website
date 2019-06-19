@@ -68,11 +68,71 @@
   }
 }
 
-p.longtext {
+.fh5co-person {
+  figure img {
+    filter: drop-shadow(0 0 0.75rem #aaa);
+  }
+}
+
+.longtext {
   font-size: 18px;
 }
 
-.coming-soon {
-  font-style: italic;
-  font-size: 150%;
+.edition-label {
+  margin-top: -3rem;
+}
+
+.intro-text-after-call-to-action {
+  display: block;
+  margin-top: 1rem;
+}
+
+footer {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  text-align: center;
+
+  .brand {
+    font-size: 110%;
+    margin-bottom: 2rem;
+
+    a {
+      color: black;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .logo {
+      margin-right: 1rem;
+    }
+
+    .product {
+      font-weight: bold;
+    }
+  }
+
+  nav {
+    font-size: 90%;
+    margin-bottom: 2rem;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      display: inline;
+    }
+
+    li + li {
+      margin-left: 1.5rem;
+    }
+  }
+
+  .acknowledgements {
+    font-size: 80%;
+  }
 }

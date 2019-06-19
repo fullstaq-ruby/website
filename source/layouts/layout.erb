@@ -17,7 +17,7 @@
           <div class="navbar-header">
             <!-- Mobile Toggle Menu Button -->
             <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-            <a class="navbar-brand" href="index.html"><%= image_tag 'fullstaq-logo-small.png', srcset: 'fullstaq-logo-small.png 1x, fullstaq-logo-small@2x.png 2x', class: 'logo', alt: '', 'aria-hidden': true %><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup></a>
+            <% link_to '/index.html', class: 'navbar-brand' do %><%= image_tag 'fullstaq-logo-small.png', srcset: 'fullstaq-logo-small.png 1x, fullstaq-logo-small@2x.png 2x', class: 'logo', alt: '', 'aria-hidden': true %><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup><% end %>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -32,13 +32,14 @@
 
               <%= navbar_link 'Get Started', :get_started, @current_section, '/server_edition/get_started.html' %>
               <% navbar_dropdown 'Editions', :editions, @current_section do %>
-                <%= navbar_link 'Server Edition', [:editions, :server_edition], @current_section, '#' %>
+                <%= navbar_link %Q{Server Edition <span class="label label-primary">beta</span>}, [:editions, :server_edition], @current_section, '#' %>
                 <li role="separator" class="divider"></li>
-                <li class="disabled"><a href="#">Container Edition <span class="badge">coming soon!</span></a></li>
-                <li class="disabled"><a href="#">Heroku Edition <span class="badge">coming soon!</span></a></li>
+                <li class="disabled"><a href="#">Container Edition <span class="label label-default">coming soon!</span></a></li>
+                <li class="disabled"><a href="#">Heroku Edition <span class="label label-default">coming soon!</span></a></li>
               <% end %>
+              <%= navbar_link 'Roadmap', :roadmap, @current_section, '/roadmap.html' %>
               <%= navbar_link 'Github', :github, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition' %>
-              <%= navbar_link 'Blog', :blog, @current_section, '/blog/index.html' %>
+              <%= navbar_link 'Follow', :follow, @current_section, '/index.html', anchor: 'follow' %>
               <%= navbar_link 'About', :about, @current_section, '/index.html', anchor: 'about' %>
             </ul>
           </div>
@@ -47,5 +48,29 @@
     </header>
 
     <%= yield %>
+
+    <footer>
+      <div class="container">
+        <div class="brand">
+          <% link_to '/index.html' do %><%= image_tag 'fullstaq-logo-small.png', srcset: 'fullstaq-logo-small.png 1x, fullstaq-logo-small@2x.png 2x', class: 'logo', alt: '', 'aria-hidden': true %><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup><% end %>
+        </div>
+
+        <div>
+          <nav>
+            <ul>
+              <li><%= link_to 'Get Started', '/server_edition/get_started.html' %></li>
+              <li><%= link_to 'Roadmap', '/roadmap.html' %></li>
+              <li><%= link_to 'Github', :github, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition' %>
+              <li><%= link_to 'Follow', '/index.html', anchor: 'follow' %>
+              <li><%= link_to 'About', '/index.html', anchor: 'about' %>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="acknowledgements">
+          <a href="https://www.vexels.com/vectors/preview/151224/slot-diamond-icon">Blue slot diamond icon originally designed by Vexels.com</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
