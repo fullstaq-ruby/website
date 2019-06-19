@@ -1,12 +1,16 @@
-This website's design is based on the [Hugo Elate theme](https://github.com/saey55/hugo-elate-theme). Its license is shown below.
+The content in this website is MIT licensed, with the exception of the following assets:
 
-Note that not all assets in the Fullstaq Ruby website are MIT licensed. See LICENSE.md for details.
+ * The `ruby-blue` logo is based on material originally designed by, and copyrighted by, [Vexels.com](https://www.vexels.com/png-svg/preview/151224/slot-diamond-icon). It is distributed under a proprietary free-of-charge license.
+ * `server.svg` and `container.svg` are proprietary, purchased from IconFinder.com.
+ * The Fullstaq logo is proprietary, copyrighted by Fullstaq B.V.
+ * The Heroku logo is proprietary, copyrighted by Heroku Inc.
 
 ---
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Pieter Saey
+Copyright (c) 2019 Hongli Lai
+Copyright (c) 2019 Fullstaq B.V.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

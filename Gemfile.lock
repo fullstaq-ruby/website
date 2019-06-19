@@ -103,6 +103,7 @@ PLATFORMS
 DEPENDENCIES
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
+  rake
   tzinfo-data
   wdm (~> 0.1)
 
