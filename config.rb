@@ -41,7 +41,6 @@ page '/*.txt', layout: false
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 activate :relative_assets
-activate :asset_hash
 
 set :relative_links, true
 
@@ -53,4 +52,5 @@ configure :build do
   set :google_analytics, true
   activate :minify_css
   activate :minify_javascript
+  activate :asset_hash
 end

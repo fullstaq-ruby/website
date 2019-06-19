@@ -5,11 +5,12 @@
       <div class="text-inner">
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <%= image_tag 'ruby-blue.png',
-              height: 256,
-              class: 'hero-splash',
-              srcset: 'ruby-blue.png 1x, ruby-blue@2x.png 2x',
-              alt: 'Fullstaq Ruby logo' %>
+            <img
+              src="<%= image_path 'ruby-blue.png' %>"
+              srcset="<%= image_path 'ruby-blue.png' %> 1x, <%= image_path 'ruby-blue@2x.png' %> 2x"
+              height="256"
+              alt="Fullstaq Ruby logo"
+              class="hero-splash">
 
             <h1>Ruby, optimized for production</h1>
             <h2>

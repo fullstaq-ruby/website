@@ -16,7 +16,7 @@
           <div class="navbar-header">
             <!-- Mobile Toggle Menu Button -->
             <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-            <% link_to '/index.html', class: 'navbar-brand' do %><%= image_tag 'fullstaq-logo-small.png', srcset: 'fullstaq-logo-small.png 1x, fullstaq-logo-small@2x.png 2x', class: 'logo', alt: '', 'aria-hidden': true %><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup><% end %>
+            <% link_to '/index.html', class: 'navbar-brand' do %><img src="<%= image_path 'fullstaq-logo-small.png' %>" srcset="<%= image_path 'fullstaq-logo-small.png' %> 1x, <%= image_path 'fullstaq-logo-small@2x.png' %> 2x" class="logo" alt="" aria-hidden="true"><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup><% end %>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -51,7 +51,7 @@
     <footer>
       <div class="container">
         <div class="brand">
-          <% link_to '/index.html' do %><%= image_tag 'fullstaq-logo-small.png', srcset: 'fullstaq-logo-small.png 1x, fullstaq-logo-small@2x.png 2x', class: 'logo', alt: '', 'aria-hidden': true %><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup><% end %>
+          <% link_to '/index.html' do %><img src="<%= image_path 'fullstaq-logo-small.png' %>" srcset="<%= image_path 'fullstaq-logo-small.png' %> 1x, <%= image_path 'fullstaq-logo-small@2x.png' %> 2x" class="logo" alt="" aria-hidden="true"><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup><% end %>
         </div>
 
         <div>
