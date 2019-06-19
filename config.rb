@@ -45,10 +45,12 @@ activate :relative_assets
 set :relative_links, true
 
 configure :development do
+  set :root_url, 'http://127.0.0.1:4567'
   set :google_analytics, false
 end
 
 configure :build do
+  set :root_url, 'https://fullstaqruby.org'
   set :google_analytics, true
   activate :minify_css
   activate :minify_javascript
