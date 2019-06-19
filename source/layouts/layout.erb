@@ -7,7 +7,6 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Fullstaq Ruby" %></title>
     <%= stylesheet_link_tag "bootstrap", "site", "icomoon", "custom" %>
-    <%= javascript_include_tag "jquery-3.4.1.min", "bootstrap.min", "site" %>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -72,5 +71,19 @@
         </div>
       </div>
     </footer>
+
+    <% if config[:google_analytics] %>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142401740-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142401740-1');
+      </script>
+    <% end %>
+
+    <%= javascript_include_tag "jquery-3.4.1.min", "bootstrap.min", "site" %>
   </body>
 </html>

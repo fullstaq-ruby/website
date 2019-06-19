@@ -40,7 +40,12 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :development do
+  set :google_analytics, false
+end
+
+configure :build do
+  set :google_analytics, true
+  activate :minify_css
+  activate :minify_javascript
+end

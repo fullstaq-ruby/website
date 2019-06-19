@@ -8,7 +8,7 @@ task :upload do
   sh 'rm -rf upload.tmp'
   sh 'mkdir upload.tmp'
   sh 'cp -pR build/* upload.tmp/'
-  sh 'cd upload.tmp && git init && git commit -a -m Build'
+  sh 'cd upload.tmp && git init && git add . && git commit -a -m Build'
   sh 'cd upload.tmp && git remote add origin git@github.com:fullstaq-labs/fullstaq-ruby-website.git'
   sh 'cd upload.tmp && git push -f origin master:gh-pages'
   sh 'rm -rf upload.tmp'
