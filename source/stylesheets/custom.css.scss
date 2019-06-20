@@ -68,6 +68,16 @@
   }
 }
 
+.fh5co-text h2 {
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
 .fh5co-person {
   figure img {
     filter: drop-shadow(0 0 0.75rem #aaa);
