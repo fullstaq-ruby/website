@@ -1,6 +1,6 @@
 # Fullstaq Ruby website
 
-> For overarching Fullstaq Ruby issues, documents and other resources, or for other Fullstaq Ruby subprojects, please refer to the [fullstaq-ruby-project](https://github.com/fullstaq-labs/fullstaq-ruby-project) repo.
+> For overarching Fullstaq Ruby issues, documents and other resources, or for other Fullstaq Ruby projects, please refer to the [fullstaq-ruby-umbrella](https://github.com/fullstaq-labs/fullstaq-ruby-umbrella) repo.
 
 This repository contains [the Fullstaq Ruby website](https://fullstaqruby.org). It is a static site, built with [Middleman](https://middlemanapp.com/).
 
