@@ -1,17 +1,11 @@
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  background: transparent;
-}
+@import "~bootstrap/scss/_functions.scss";
+@import "elate/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
 
-.navbar-brand {
-  // Fix vertical alignment on mobile.
-  padding-top: 1rem;
-
+.navbar-brand-fullstaq-ruby {
   > .logo {
     display: inline-block;
     margin-right: 1rem;
-    vertical-align: middle;
   }
 
   > .vendor {
@@ -58,13 +52,25 @@
     .highlights {
       list-style: none;
       padding: 0;
-      margin: 3rem 0;
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 3rem;
+      }
 
       li:before {
         content: '✓';
         padding-right: 2rem;
       }
     }
+  }
+}
+
+#fh5co-testimonials {
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -95,7 +101,7 @@
 }
 
 .edition-label {
-  margin-top: -3rem;
+  margin-top: -0.5rem;
 }
 
 .intro-text-after-call-to-action {

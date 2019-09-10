@@ -1,18 +1,22 @@
 module NavigationHelpers
   def navbar_link(label, section_id, current_section_id, target, options = {})
-    link = link_to(%Q{<span>#{label}</span>}, url_for(target),
-      { 'data-nav-section': [section_id].flatten.last }.merge(options))
+    link_options = {
+      class: 'nav-link',
+      'data-nav-section': [section_id].flatten.last
+    }.merge(options)
+    link = link_to(%Q{<span>#{label}</span>}, url_for(target), link_options)
     if current_section_id_matches?(current_section_id, section_id)
-      %Q{<li class="active">#{link}</li>}
+      %Q{<li class="nav-item active">#{link}</li>}
     else
-      %Q{<li>#{link}</li>}
+      %Q{<li class="nav-item">#{link}</li>}
     end
   end
 
   def navbar_dropdown(label, section_id, current_section_id)
-    link = link_to(%Q{<span>#{label} <span class="caret"></span></span>},
+    link = link_to(%Q{<span>#{label}</span>},
       '#',
-      class: 'dropdown-toggle',
+      id: "navbar_dropdown_#{section_id}",
+      class: 'nav-link dropdown-toggle',
       role: 'button',
       'data-toggle': 'dropdown',
       'aria-haspopup': true,
@@ -23,9 +27,25 @@ module NavigationHelpers
       else
         nil
       end
-    concat %Q{<li class="dropdown #{active_class}">#{link}<ul class="dropdown-menu">}
+    concat %Q{
+      <li class="nav-item dropdown #{active_class}">
+        #{link}
+        <div class="dropdown-menu" aria-labelledby="navbar_dropdown_#{section_id}">
+    }
     yield
-    concat %Q{</ul></li>}
+    concat %Q{</div></li>}
+  end
+
+  def navbar_dropdown_item(label, section_id, current_section_id, target, options = {})
+    link_options = {
+      class: 'dropdown-item',
+      'data-nav-section': [section_id].flatten.last
+    }
+    if current_section_id_matches?(current_section_id, section_id)
+      link_options[:class] << ' active'
+    end
+    link_options.merge!(options)
+    link_to(%Q{<span>#{label}</span>}, url_for(target), link_options)
   end
 
 private

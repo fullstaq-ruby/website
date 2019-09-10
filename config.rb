@@ -1,9 +1,17 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
+activate :relative_assets
+
+activate :external_pipeline,
+  name: :webpack,
+  command: build? \
+    ? 'env NODE_ENV=production yarn run webpack --bail --production' \
+    : 'yarn run webpack --watch -d --color',
+  source: 'tmp/dist',
+  latency: 1
+
+set :relative_links, true
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -40,10 +48,6 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-activate :relative_assets
-
-set :relative_links, true
-
 configure :development do
   set :root_url, 'http://127.0.0.1:4567'
   set :google_analytics, false
@@ -52,7 +56,5 @@ end
 configure :build do
   set :root_url, 'https://fullstaqruby.org'
   set :google_analytics, true
-  activate :minify_css
-  activate :minify_javascript
   activate :asset_hash
 end

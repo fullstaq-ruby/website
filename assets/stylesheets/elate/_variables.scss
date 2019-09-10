@@ -1,0 +1,27 @@
+$primary: #46aecf;
+$body-color: #555;
+
+$link-color: darken($primary, 15%);
+$link-hover-color: #56c4ea;
+
+$font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-size-base: 1.125rem;
+$font-size-md-sm: $font-size-base * .92;
+$font-weight-normal: 300;
+
+$paragraph-margin-bottom: 1.5rem;
+
+$navbar-nav-link-padding-x: 1rem;
+
+$btn-font-weight: 400;
+$btn-primary-hover-color: $link-hover-color;
+
+$transition-base: all .5s ease-in-out;
+
+@import "~bootstrap/scss/_variables.scss";
+
+$lightdark: $gray-400;
+
+$slant-height: 70px;
+$slant-height-after-rotation: $slant-height * 1.175;
+$intro-negative-margin-top: -10rem;

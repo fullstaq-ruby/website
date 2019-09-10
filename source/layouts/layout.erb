@@ -7,7 +7,7 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Fullstaq Ruby" %></title>
     <meta name="description" content="A new Ruby distribution for production environments. Less memory, faster, more secure, fully open source, based on MRI.">
-    <%= stylesheet_link_tag "bootstrap", "site", "icomoon", "custom" %>
+    <%= stylesheet_link_tag 'elate/bootstrap.css', 'elate/main.css', 'custom.css', 'icomoon.css' %>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700" rel="stylesheet" type="text/css">
 
     <meta name="twitter:card" content="summary">
@@ -26,42 +26,41 @@
     <meta property="og:image:height" content="752">
   </head>
   <body>
-    <header role="banner" id="fh5co-header">
+    <nav class="navbar navbar-expand-lg navbar-landing-page">
       <div class="container">
-        <nav class="navbar navbar-default">
-          <div class="navbar-header">
-            <!-- Mobile Toggle Menu Button -->
-            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-            <% link_to '/index.html', class: 'navbar-brand' do %><img src="<%= image_path 'fullstaq-logo-small.png' %>" srcset="<%= image_path 'fullstaq-logo-small.png' %> 1x, <%= image_path 'fullstaq-logo-small@2x.png' %> 2x" class="logo" alt="" aria-hidden="true"><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup><% end %>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <!--
-              <% navbar_dropdown 'Get Started', :get_started, @current_section do %>
-                <%= navbar_link 'For Servers', [:get_started, :get_started_for_servers], @current_section, '#' %>
-                <li role="separator" class="divider"></li>
-                <li class="disabled"><a href="#">For Containers <span class="badge">coming soon!</span></a></li>
-                <li class="disabled"><a href="#">For Heroku <span class="badge">coming soon!</span></a></li>
-              <% end %>
-              -->
+        <% link_to '/index.html', class: 'navbar-brand navbar-brand-fullstaq-ruby' do %><img src="<%= image_path 'fullstaq-logo-small.png' %>" srcset="<%= image_path 'fullstaq-logo-small.png' %> 1x, <%= image_path 'fullstaq-logo-small@2x.png' %> 2x" class="logo" alt="" aria-hidden="true"><span class="vendor">Fullstaq</span> <span class="product">Ruby</span> <sup class="beta-disclaimer">beta</sup><% end %>
 
-              <%= navbar_link 'Get Started', :get_started, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#installation' %>
-              <% navbar_dropdown 'Editions', :editions, @current_section do %>
-                <%= navbar_link %Q{Server Edition <span class="label label-primary">beta</span>}, [:editions, :server_edition], @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md' %>
-                <li role="separator" class="divider"></li>
-                <li class="disabled"><a href="#">Container Edition <span class="label label-default">coming soon!</span></a></li>
-                <li class="disabled"><a href="#">Heroku Edition <span class="label label-default">coming soon!</span></a></li>
-              <% end %>
-              <%= navbar_link 'Docs', :docs, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md' %>
-              <%= navbar_link 'Roadmap', :roadmap, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella/projects' %>
-              <%= navbar_link 'GitHub', :github, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella' %>
-              <%= navbar_link 'Follow', :follow, @current_section, 'https://twitter.com/honglilai' %>
-              <%= navbar_link 'About', :about, @current_section, '/index.html', anchor: 'about' %>
-            </ul>
-          </div>
-        </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <!--
+            <% navbar_dropdown 'Get Started', :get_started, @current_section do %>
+              <%= navbar_dropdown_item 'For Servers', [:get_started, :get_started_for_servers], @current_section, '#' %>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item disabled">For Containers <span class="badge">coming soon!</span></a>
+              <a href="#" class="dropdown-item disabled">For Heroku <span class="badge">coming soon!</span></a>
+            <% end %>
+            -->
+
+            <%= navbar_link 'Get Started', :get_started, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#installation' %>
+            <% navbar_dropdown 'Editions', :editions, @current_section do %>
+              <%= navbar_dropdown_item %Q{Server Edition <span class="label label-primary">beta</span>}, [:editions, :server_edition], @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md' %>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item disabled">Container Edition <span class="badge badge-secondary">coming soon!</span></a>
+              <a href="#" class="dropdown-item disabled">Heroku Edition <span class="badge badge-secondary">coming soon!</span></a>
+            <% end %>
+            <%= navbar_link 'Docs', :docs, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md' %>
+            <%= navbar_link 'Roadmap', :roadmap, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella/projects' %>
+            <%= navbar_link 'GitHub', :github, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella' %>
+            <%= navbar_link 'Follow', :follow, @current_section, 'https://twitter.com/honglilai' %>
+            <%= navbar_link 'About', :about, @current_section, '/index.html', anchor: 'about' %>
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
 
     <%= yield %>
 
@@ -102,6 +101,6 @@
       </script>
     <% end %>
 
-    <%= javascript_include_tag "jquery-3.4.1.min", "bootstrap.min", "site" %>
+    <%= javascript_include_tag 'bootstrap' %>
   </body>
 </html>

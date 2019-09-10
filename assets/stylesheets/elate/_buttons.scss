@@ -1,0 +1,31 @@
+/*********************************
+ *
+ * Publicly-usable classes
+ *
+ *********************************/
+
+.btn-uppercase {
+  font-size: 90%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-lg-padding {
+  padding: 0.625rem 1.25rem;
+}
+
+
+/*********************************
+ *
+ * Bootstrap styling overrides
+ *
+ *********************************/
+
+.btn {
+  transition: 0.5s;
+}
+
+.btn-primary:hover {
+  background-color: $btn-primary-hover-color;
+  border-color: $btn-primary-hover-color;
+}

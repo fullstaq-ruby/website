@@ -3,3 +3,7 @@
 .DS_Store
 .sass-cache
 /build
+/tmp
+/node_modules
+/source/javascripts/bundle.js
+/source/stylesheets/bundle.css

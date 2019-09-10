@@ -6,11 +6,12 @@ This repository contains [the Fullstaq Ruby website](https://fullstaqruby.org). 
 
 ## Development
 
-Middleman requires Ruby, so install that first.
+Middleman requires Ruby and Node.js, so install those first.
 
-Before developing, install the gem bundle:
+Before developing, install the gem bundle and the Node.js packages:
 
     bundle install
+    yarn install --frozen-lockfile
 
 Then spawn the Middleman server:
 
