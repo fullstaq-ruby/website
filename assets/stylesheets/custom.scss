@@ -109,6 +109,16 @@
   margin-top: 1rem;
 }
 
+.feature-highlight-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.feature-highlight-body {
+  flex-grow: 1;
+}
+
 .stay-tuned {
   font-size: 160%;
   margin-bottom: 1rem;

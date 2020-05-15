@@ -25,7 +25,7 @@ title: 'Fullstaq Ruby: Ruby, optimized for production'
 
             <div class="highlights-container">
               <ul class="highlights">
-                <li>Less memory — save <strong>30-50%</strong></li>
+                <li>Less memory — save <strong><a href="https://dev.to/evilmartians/fullstaq-ruby-first-impressions-and-how-to-migrate-your-docker-kubernetes-ruby-apps-today-4fm7">30-50%</a></strong></li>
                 <li>Faster</li>
                 <li>More secure</li>
                 <li>Fully open source, based on MRI</li>
@@ -94,43 +94,66 @@ title: 'Fullstaq Ruby: Ruby, optimized for production'
     </div>
 
     <div class="row">
-      <div class="col-md-5 offset-md-1">
+      <div class="col-md-6 offset-md-3">
         <p>Fullstaq Ruby is an MRI-based Ruby distribution that's optimized for server production use cases. It is compiled with the <a href="https://medium.com/rubyinside/how-we-halved-our-memory-consumption-in-rails-with-jemalloc-86afa4e54aa3">Jemalloc</a> and <a href="https://www.joyfulbikeshedding.com/blog/2019-03-14-what-causes-ruby-memory-bloat.html">malloc_trim</a> patches, allowing lower memory usage and higher performance.</p>
         <p>We supply binaries (DEBs, RPMs) so that you don't have to compile Ruby from source, and so that you can easily keep Ruby security-patched.</p>
       </div>
-      <div class="col-md-4 d-sm-flex flex-column align-items-center">
-        <h3>Learn more</h3>
-        <ul>
-          <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#why-was-fullstaq-ruby-created">Why did we make Fullstaq Ruby?</a></li>
-          <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#how-it-works">How does it work?</a></li>
-          <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#comparisons-to-other-systems">Comparisons to other systems</a></li>
-          <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#faq">Frequently Asked Questions</a></li>
-        </ul>
-        <p style="margin-bottom: 1rem">-or-</p>
-        <p><%= link_to 'Get Started', 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#installation', class: 'btn btn-primary btn-uppercase btn-lg-padding' %></p>
-      </div>
     </div>
 
-    <div class="row" style="margin-top: 3rem">
-      <div class="col-md-5 offset-md-1">
-        <h3>For the community, by the community</h3>
+    <div class="row" style="margin-top: 1rem">
+      <div class="col-md-4 feature-highlight-item">
+        <h3>50% less memory (yes, really)</h3>
 
+        <p class="feature-highlight-body">
+          <a href="https://dev.to/evilmartians/fullstaq-ruby-first-impressions-and-how-to-migrate-your-docker-kubernetes-ruby-apps-today-4fm7">Andrey Novikov</a> from <a href="https://evilmartians.com/">Evil Martians</a> reviewed and tested Fullstaq Ruby on multiple workloads, including web apps and background workers. The verdict: drastic reduction in memory usage, as well as a slight performance improvement.
+        </p>
         <p>
-          We intend for Fullstaq Ruby to be a true <em>community project</em>, welcoming contributors all over the world, and maintainable by anyone. To make this work, we are working on a lot more developer and contributor documentation.
+          <a href="https://dev.to/evilmartians/fullstaq-ruby-first-impressions-and-how-to-migrate-your-docker-kubernetes-ruby-apps-today-4fm7">&raquo; Read the review</a>
         </p>
       </div>
-      <div class="col-md-5">
-        <h3>More improvements on the way</h3>
+      <div class="col-md-4 feature-highlight-item">
+        <h3>A open source project to count on</h3>
+
+        <p class="feature-highlight-body">
+          Fullstaq Ruby is fully open source. We're committed to safeguard the long-term viability and health of this project. How? By closely collaborating with the community, and by making it maintainable by anyone.
+        </p>
         <p>
+          <a href="https://www.joyfulbikeshedding.com/blog/2020-05-15-why-fullstaq-ruby.html">&raquo; Learn about the long-term vision</a>
+        </p>
+      </div>
+      <div class="col-md-4 feature-highlight-item">
+        <h3>More improvements on the way</h3>
+
+        <p class="feature-highlight-body">
           Fullstaq Ruby is in beta: it is a <strong>work-in-progress</strong>. Further memory reduction optimizations are possible. Better system integration is planned. And much more.
         </p>
-      </div>
-      <div class="col-md-12 text-center">
-        <p class="stay-tuned">So stay tuned, folks!</p>
         <p>
-          <%= link_to 'View our roadmap', 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella/projects' %><br>
-          <a href="https://twitter.com/honglilai">Follow Twitter for news</a>
+          <a href="https://github.com/fullstaq-labs/fullstaq-ruby-umbrella/projects">&raquo; View our roadmap</a>
         </p>
+      </div>
+      <!-- <div class="col-md-5 feature-highlight-item"> -->
+        <!-- <div class="col-md-4 d-sm-flex flex-column align-items-center"> -->
+          <!-- <h3>Learn more</h3>
+          <ul>
+            <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#why-was-fullstaq-ruby-created">Why did we make Fullstaq Ruby?</a></li>
+            <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#how-it-works">How does it work?</a></li>
+            <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#comparisons-to-other-systems">Comparisons to other systems</a></li>
+            <li><a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#faq">Frequently Asked Questions</a></li>
+          </ul>
+          <p style="margin-bottom: 1rem">-or-</p>
+          <p><%= link_to 'Get Started', 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#installation', class: 'btn btn-primary btn-uppercase btn-lg-padding' %></p> -->
+        <!-- </div> -->
+      <!-- </div> -->
+      <div class="col-md-12 text-center feature-highlight-item">
+        <p class="stay-tuned">Now's a good time to get started</p>
+        <p>
+          <a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#why-was-fullstaq-ruby-created">Why did we make Fullstaq Ruby?</a>
+          ・ <a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#how-it-works">How does it work?</a>
+          ・ <a href="https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#faq">FAQ</a>
+          ・ <a href="https://twitter.com/honglilai">Follow Twitter</a>
+        </p>
+        <p style="margin-bottom: 1.5rem">-or-</p>
+        <p><%= link_to 'Install Fullstaq Ruby', 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/master/README.md#installation', class: 'btn btn-primary btn-uppercase btn-lg-padding' %></p>
       </div>
     </div>
   </div>
@@ -151,7 +174,7 @@ title: 'Fullstaq Ruby: Ruby, optimized for production'
           <h3><a href="https://www.joyfulbikeshedding.com">Hongli Lai</a></h3>
           <span class="fh5co-position">Developer, CTO, entrepreneur</span>
 
-          <p><a href="https://www.joyfulbikeshedding.com">Hongli</a> is the creator of the <a href="https://www.phusionpassenger.com">Passenger application server</a>, CTO at Phusion, and creator of the classic Ruby Enterprise Edition.</p>
+          <p><a href="https://www.joyfulbikeshedding.com">Hongli</a> is the creator of the <a href="https://www.phusionpassenger.com">Passenger application server</a>, CTO at Phusion, and creator of the classic <em>Ruby Enterprise Edition</em>.</p>
           <p class="longtext">Hongli writes software with the belief that software development and work should be fun, and that computers should serve humans instead of the other way around.</p>
 
           <ul class="social social-circle">
@@ -169,7 +192,7 @@ title: 'Fullstaq Ruby: Ruby, optimized for production'
           <h3><a href="https://fullstaq.com/">Fullstaq</a></h3>
           <span class="fh5co-position">Succeed in Cloud Native</span>
 
-          <p><a href="https://fullstaq.com/">Fullstaq</a>'s mission is to help startups and SMBs to succeed in the cloud native< way of working.</p>
+          <p><a href="https://fullstaq.com/">Fullstaq</a>'s mission is to help startups and SMBs to succeed in the cloud native way of working.</p>
 
           <p class="longtext">Fullstaq helps you take your stack to the next level through consultancy, training and managed services in the area of cloud native technologies, Kubernetes, containerization and DevOps.</p>
 
