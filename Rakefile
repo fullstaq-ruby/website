@@ -12,6 +12,6 @@ task :upload do
   sh 'echo fullstaqruby.org > upload.tmp/CNAME'
   sh 'cd upload.tmp && git add . && git commit -a -m Build'
   sh 'cd upload.tmp && git remote add origin git@github.com:fullstaq-labs/fullstaq-ruby-website.git'
-  sh 'cd upload.tmp && git push -f origin main:gh-pages'
+  sh 'cd upload.tmp && git push -f origin master:gh-pages'
   sh 'rm -rf upload.tmp'
 end
