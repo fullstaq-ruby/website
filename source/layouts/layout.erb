@@ -54,15 +54,18 @@
 
             <%= navbar_link 'Get Started', :get_started, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/main/README.md#installation' %>
             <% navbar_dropdown 'Editions', :editions, @current_section do %>
-              <%= navbar_dropdown_item %Q{Server Edition <span class="label label-primary">beta</span>}, [:editions, :server_edition], @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/main/README.md' %>
+              <%= navbar_dropdown_item %Q{Server Edition <span class="badge badge-primary">beta</span>}, [:editions, :server_edition], @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/main/README.md' %>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item disabled">Container Edition <span class="badge badge-secondary">coming soon!</span></a>
               <a href="#" class="dropdown-item disabled">Heroku Edition <span class="badge badge-secondary">coming soon!</span></a>
             <% end %>
             <%= navbar_link 'Docs', :docs, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/main/README.md' %>
-            <%= navbar_link 'Roadmap', :roadmap, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella/blob/main/ROADMAP.md' %>
-            <%= navbar_link 'GitHub', :github, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella' %>
-            <%= navbar_link 'Follow', :follow, @current_section, 'https://twitter.com/honglilai' %>
+            <%= navbar_link 'Discuss', :discuss, @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/discussions' %>
+            <% navbar_dropdown 'Project', :project, @current_section do %>
+              <%= navbar_dropdown_item 'Github', [:project, :github], @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella/blob/main/ROADMAP.md' %>
+              <%= navbar_dropdown_item 'Roadmap', [:project, :roadmap], @current_section, 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella' %>
+              <%= navbar_dropdown_item 'Follow on Twitter', [:project, :follow], @current_section, 'https://twitter.com/honglilai' %>
+            <% end %>
             <%= navbar_link 'About', :about, @current_section, '/index.html', anchor: 'about' %>
           </ul>
         </div>
@@ -82,6 +85,7 @@
             <ul>
               <li><%= link_to 'Get Started', 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/main/README.md#installation' %></li>
               <li><%= link_to 'Docs', 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/blob/main/README.md' %></li>
+              <li><%= link_to 'Discuss', 'https://github.com/fullstaq-labs/fullstaq-ruby-server-edition/discussions' %></li>
               <li><%= link_to 'Roadmap', 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella/blob/main/ROADMAP.md' %></li>
               <li><%= link_to 'GitHub', 'https://github.com/fullstaq-labs/fullstaq-ruby-umbrella' %>
               <li><%= link_to 'Follow', 'https://twitter.com/honglilai' %>
