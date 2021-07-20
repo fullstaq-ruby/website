@@ -27,18 +27,6 @@
     margin-bottom: 2rem;
   }
 
-  @media screen and (min-width: 1200px) {
-    .mid-sentence-break {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .mid-sentence-break {
-      display: none;
-    }
-  }
-
   .highlights-container {
     display: flex;
     justify-content: center;
@@ -59,9 +47,18 @@
         margin-top: 3rem;
       }
 
+      li {
+        display: flex;
+        margin-bottom: 0.5rem;
+      }
+
       li:before {
         content: '✓';
         padding-right: 2rem;
+
+        @media screen and (max-width: 400px) {
+          padding-right: 1rem;
+        }
       }
     }
   }
