@@ -1,0 +1,114 @@
+@charset "UTF-8";
+.navbar-brand-fullstaq-ruby > .logo {
+  display: inline-block;
+  margin-right: 1rem; }
+
+.navbar-brand-fullstaq-ruby > .vendor {
+  font-weight: normal; }
+
+.navbar-brand-fullstaq-ruby > .product {
+  font-weight: bold; }
+
+.navbar-brand-fullstaq-ruby > .beta-disclaimer {
+  font-weight: 300;
+  font-size: 60%; }
+
+#fh5co-home .hero-splash {
+  margin-bottom: 2rem; }
+
+#fh5co-home .highlights-container {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  font-size: 25px; }
+  @media screen and (max-width: 400px) {
+    #fh5co-home .highlights-container {
+      font-size: 20px; } }
+  #fh5co-home .highlights-container .highlights {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 0; }
+    @media (min-width: 768px) {
+      #fh5co-home .highlights-container .highlights {
+        margin-top: 3rem; } }
+    #fh5co-home .highlights-container .highlights li {
+      display: flex;
+      margin-bottom: 0.5rem; }
+    #fh5co-home .highlights-container .highlights li:before {
+      content: '✓';
+      padding-right: 2rem; }
+      @media screen and (max-width: 400px) {
+        #fh5co-home .highlights-container .highlights li:before {
+          padding-right: 1rem; } }
+
+#fh5co-testimonials h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.fh5co-text h2 a {
+  color: inherit; }
+
+.fh5co-text h2 a:hover {
+  text-decoration: none; }
+
+.fh5co-person figure img {
+  filter: drop-shadow(0 0 0.75rem #aaa); }
+
+@media (max-width: 991px) {
+  .fh5co-person:not(.last) {
+    margin-bottom: 160px; } }
+
+.longtext {
+  font-size: 18px; }
+
+.edition-label {
+  margin-top: -0.5rem; }
+
+.intro-text-after-call-to-action {
+  display: block;
+  margin-top: 1rem; }
+
+.feature-highlight-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem; }
+
+.feature-highlight-body {
+  flex-grow: 1; }
+
+.stay-tuned {
+  font-size: 160%;
+  margin-bottom: 1rem; }
+
+footer {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  text-align: center; }
+  footer .brand {
+    font-size: 110%;
+    margin-bottom: 2rem; }
+    footer .brand a {
+      color: black; }
+    footer .brand a:hover {
+      text-decoration: none; }
+    footer .brand .logo {
+      margin-right: 1rem; }
+    footer .brand .product {
+      font-weight: bold; }
+  footer nav {
+    font-size: 90%;
+    margin-bottom: 2rem; }
+    footer nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+    footer nav li {
+      margin: 0;
+      padding: 0;
+      display: inline; }
+    footer nav li + li {
+      margin-left: 1.5rem; }
+  footer .acknowledgements {
+    font-size: 80%; }
+
